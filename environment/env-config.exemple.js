@@ -1,3 +1,0 @@
-window.env = {
-  ENVIRONMENT: 'dev',
-};

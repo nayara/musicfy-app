@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios from "axios";
 
 export const apiInstance = axios.create({
-  baseURL: window.env?.SOME_API_URL || 'http://localhost:3000',
+  baseURL: "http://localhost:3000",
   timeout: 10000,
 });
