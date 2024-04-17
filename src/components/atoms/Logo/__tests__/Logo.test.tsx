@@ -1,5 +1,5 @@
-import { render, screen } from "../../../../utils/test-utils";
 import { userEvent } from "@testing-library/user-event";
+import { render, screen } from "../../../../utils/test-utils";
 import Logo from "..";
 
 const mockUseNavigate = jest.fn();
