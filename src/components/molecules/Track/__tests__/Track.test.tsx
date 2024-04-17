@@ -34,24 +34,14 @@ jest.mock("react-router-dom", () => ({
 describe("<Track />", () => {
   it("should render correctly", () => {
     const { container } = render(
-      <Track
-        id={"some-id"}
-        title="Some awsome track"
-        contentsItems={mockedItems}
-      />
+      <Track title="Some awsome track" contentsItems={mockedItems} />
     );
 
     expect(container).toMatchSnapshot();
   });
 
   it("should redirect to playlist page when playlist card is clicked", async () => {
-    render(
-      <Track
-        id={"some-id"}
-        title="Some awsome track"
-        contentsItems={mockedItems}
-      />
-    );
+    render(<Track title="Some awsome track" contentsItems={mockedItems} />);
 
     const cardButton = screen.getByRole("button", {
       name: /Playlist Happy Hits!/i,

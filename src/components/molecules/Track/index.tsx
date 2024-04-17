@@ -1,16 +1,15 @@
 import { FC } from "react";
-import { TContentItem } from "../../../api/queries/use-get-home";
+import { TContentItem } from "../../../api/queries/Home/use-get-home";
 import Card from "../../../components/atoms/Card";
 import * as Style from "./Track.styles";
 import { useNavigate } from "react-router-dom";
 
 type TTrack = {
-  id: string;
   title: string;
   contentsItems: TContentItem[];
 };
 
-const Track: FC<TTrack> = ({ id, title, contentsItems }) => {
+const Track: FC<TTrack> = ({ title, contentsItems }) => {
   const navigate = useNavigate();
 
   const handleClick = (id: string) => {
