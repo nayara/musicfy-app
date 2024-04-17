@@ -1,20 +1,22 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 
 module.exports = {
-  coverageDirectory: 'coverage',
+  coverageDirectory: "coverage",
   collectCoverageFrom: [
-    '<rootDir>/src/**/*.{ts,tsx}',
-    '!src/providers/**',
-    '!src/App.tsx',
-    '!src/index.tsx',
-    '!src/api/client.ts',
-    '!**/*.d.ts',
+    "<rootDir>/src/**/*.{ts,tsx}",
+    "!src/providers/**",
+    "!src/App.tsx",
+    "!src/index.tsx",
+    "!**/*.styles.tsx",
+    "!src/api/client.ts",
+    "!**/*.d.ts",
   ],
-  preset: 'ts-jest',
-  testEnvironment: 'jsdom',
+  preset: "ts-jest",
+  testEnvironment: "jsdom",
   transform: {
-    '^.+\\.[t|j]sx?$': 'ts-jest',
+    "^.+\\.[t|j]sx?$": "ts-jest",
   },
-  testPathIgnorePatterns: ['/node_modules/', '/dist/'],
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testPathIgnorePatterns: ["/node_modules/", "/dist/"],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  moduleDirectories: ["node_modules", "utils", __dirname],
 };
