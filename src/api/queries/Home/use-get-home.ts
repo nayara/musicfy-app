@@ -1,6 +1,5 @@
-import { apiInstance } from "../../client";
 import { useQuery } from "react-query";
-import { mockedHomeData } from "./mockedHomeData";
+import { apiInstance } from "../../client";
 
 export type TContentItem = {
   id: string;

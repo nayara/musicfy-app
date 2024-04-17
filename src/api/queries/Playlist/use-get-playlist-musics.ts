@@ -1,6 +1,5 @@
-import { apiInstance } from "../../client";
 import { useQuery } from "react-query";
-import { mockedData } from "./mockedPlaylistData";
+import { apiInstance } from "../../client";
 
 export type TArtist = {
   name: string;
@@ -18,13 +17,11 @@ type TAlbum = {
 
 type TPlaylistItem = {
   name: string;
-  durationText: string;
   album: TAlbum;
 };
 
 type TContent = {
   items: TPlaylistItem[];
-  totalCount: number;
 };
 
 type TGetPlaylistDetail = {
@@ -34,14 +31,14 @@ type TGetPlaylistDetail = {
 const getPlaylistMusics = async (
   playListId: string
 ): Promise<TGetPlaylistDetail> => {
-  const path = `playlist/contents?playlistId=${playListId}&limit=30`;
+  const path = `playlist/contents?playlistId=${playListId}&limit=6`;
 
   return apiInstance
     .get(path)
     .then(({ data }) => ({ contents: data.contents }));
 };
 
-const QUERY_NAME = "playlist";
+const QUERY_NAME = "playlistMetadata";
 
 export function useGetPlaylistMusics(playListId: string) {
   return useQuery({

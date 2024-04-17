@@ -4,7 +4,7 @@ import MockAdapter from "axios-mock-adapter";
 
 import { apiInstance } from "../../../client";
 import { useGetHome } from "../use-get-home";
-import { mockedHomeData } from "../mockedHomeData";
+import { mockedHomeData } from "../../../../__mocks__/Home/mockedHomeData";
 
 const queryClient = new QueryClient({
   defaultOptions: {
