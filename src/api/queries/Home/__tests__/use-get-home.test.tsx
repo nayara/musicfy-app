@@ -2,7 +2,7 @@ import { renderHook, waitFor } from "@testing-library/react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import MockAdapter from "axios-mock-adapter";
 
-import { apiInstance } from "../../client";
+import { apiInstance } from "../../../client";
 import { useGetHome } from "../use-get-home";
 
 const queryClient = new QueryClient({

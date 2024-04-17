@@ -1,7 +1,9 @@
-import { apiInstance } from "../client";
+import { apiInstance } from "../../client";
 import { useQuery } from "react-query";
+import { mockedHomeData } from "./mockedHomeData";
 
 export type TContentItem = {
+  id: string;
   name: string;
   description: string;
   images: { url: string }[][];
@@ -13,7 +15,6 @@ type TContent = {
 };
 
 export type TSectionItem = {
-  id: string;
   title: string;
   contents: TContent;
 };
@@ -30,11 +31,11 @@ type TGetHome = {
 const getHome = async (): Promise<TGetHome> => {
   const path = `home`;
 
-  return apiInstance.get(path).then(({ data }) => {
-    return {
-      sections: data.sections,
-    };
-  });
+  return { sections: mockedHomeData.sections };
+
+  // return apiInstance.get(path).then(({ data }) => ({
+  //   sections: data.sections,
+  // }));
 };
 
 const QUERY_NAME = "home";

@@ -1,4 +1,4 @@
-import { TSectionItem, useGetHome } from "../../../api/queries/use-get-home";
+import { TSectionItem, useGetHome } from "../../../api/queries/Home/use-get-home";
 import Track from "../../../components/molecules/Track";
 import * as Style from "./Home.styles";
 
