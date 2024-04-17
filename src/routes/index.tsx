@@ -1,10 +1,10 @@
-import { Route } from 'react-router-dom';
-import CalendarPage from '../pages/Calendar';
+import { Route } from "react-router-dom";
+import Home from "../pages/Home";
 
-export const calendarPath = 'calendar';
+export const rootPath = "/";
 
 export const PublicRoutes = (
-  <Route path={calendarPath}>
-    <Route index element={<CalendarPage />} />
+  <Route path={rootPath}>
+    <Route index element={<Home />} />
   </Route>
 );
