@@ -23,6 +23,5 @@ export function useGetPlaylistMetadata(playListId: string) {
     queryFn: () => getPlaylistMetadata(playListId),
     onError: (error: { message: string }) =>
       console.error(`Something whent wrong: ${error.message}`),
-    cacheTime: Infinity,
   });
 }

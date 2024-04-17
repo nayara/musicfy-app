@@ -46,6 +46,5 @@ export function useGetPlaylistMusics(playListId: string) {
     queryFn: () => getPlaylistMusics(playListId),
     onError: (error: { message: string }) =>
       console.error(`Something whent wrong: ${error.message}`),
-    cacheTime: Infinity,
   });
 }
