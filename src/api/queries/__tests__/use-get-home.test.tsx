@@ -35,7 +35,7 @@ describe("useGetHome", () => {
 
   test("should get home data", async () => {
     const data = {
-      content: "some-important-content",
+      sections: "some-important-content",
     };
 
     mock.onGet("/home").reply(200, data);
@@ -47,7 +47,7 @@ describe("useGetHome", () => {
     await waitFor(() => expect(result.current.isSuccess).toBe(true));
 
     expect(result.current.data).toEqual({
-      content: "some-important-content",
+      sections: "some-important-content",
     });
   });
 

@@ -1,14 +1,10 @@
 import { apiInstance } from "../client";
 import { useQuery } from "react-query";
 
-type TImageObject = {
-  url: string;
-};
-
-type TContentItem = {
+export type TContentItem = {
   name: string;
   description: string;
-  images: TImageObject[];
+  images: { url: string }[][];
 };
 
 type TContent = {
@@ -16,10 +12,10 @@ type TContent = {
   items: TContentItem[];
 };
 
-type TSectionItem = {
+export type TSectionItem = {
   id: string;
   title: string;
-  contents: TContent[];
+  contents: TContent;
 };
 
 type TSection = {
@@ -49,5 +45,6 @@ export function useGetHome() {
     queryFn: () => getHome(),
     onError: (error: { message: string }) =>
       console.error(`Something whent wrong: ${error.message}`),
+    cacheTime: Infinity,
   });
 }

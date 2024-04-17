@@ -4,7 +4,7 @@ const Container = styled.header`
   position: sticky;
   top: 0;
   width: 100vw;
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.neutral.black};
   color: ${({ theme }) => theme.colors.neutral.white};
 `;
 
