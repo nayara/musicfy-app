@@ -3,19 +3,46 @@ import { FC } from "react";
 import * as Style from "./Card.styles";
 
 type TCard = {
-  imgSrc: string;
-  altText: string;
   title: string;
-  onClick: () => void;
+  imgProps: {
+    src: string;
+    alt: string;
+    position?: string;
+    size?: string;
+  };
+  subtitle?: string;
+  clickable?: boolean;
+  onClick?: () => void;
 };
 
-const Card: FC<TCard> = ({ imgSrc, altText, title, onClick }) => {
-  return (
-    <Style.Container>
+const Card: FC<TCard> = ({
+  imgProps,
+  title,
+  subtitle = "some subtitle",
+  clickable = false,
+  onClick,
+}) => {
+  return clickable ? (
+    <Style.Container imgPosition={imgProps.position} clickable>
       <Style.Button onClick={onClick}>
-        <Style.Image src={imgSrc} alt={altText} />
-        <Style.Title>{title}</Style.Title>
+        <Style.Image
+          src={imgProps.src}
+          alt={imgProps.alt}
+          size={imgProps.size}
+        />
+        <Style.ContentWrapper imgPosition={imgProps.position}>
+          <Style.Title>{title}</Style.Title>
+          {subtitle && <Style.Subtitle>{subtitle}</Style.Subtitle>}
+        </Style.ContentWrapper>
       </Style.Button>
+    </Style.Container>
+  ) : (
+    <Style.Container imgPosition={imgProps.position}>
+      <Style.Image src={imgProps.src} alt={imgProps.alt} size={imgProps.size} />
+      <Style.ContentWrapper imgPosition={imgProps.position}>
+        <Style.Title>{title}</Style.Title>
+        {subtitle && <Style.Subtitle>{subtitle}</Style.Subtitle>}
+      </Style.ContentWrapper>
     </Style.Container>
   );
 };

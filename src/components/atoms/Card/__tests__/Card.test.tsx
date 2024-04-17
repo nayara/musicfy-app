@@ -2,18 +2,31 @@ import { userEvent } from "@testing-library/user-event";
 import Card from "..";
 import { render, screen } from "../../../../utils/test-utils";
 
+const mockedFn = jest.fn();
+
 describe("<Card />", () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
-  it("should render correctly", async () => {
+  it("should render correctly unclickable card", async () => {
     const { container } = render(
       <Card
-        imgSrc="some-awsome.jpg"
-        altText="awsome description"
+        imgProps={{ src: "some-awsome.jpg", alt: "awsome description" }}
         title="Awsome image"
-        onClick={() => {}}
+      />
+    );
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it("should render correctly clickable card", async () => {
+    const { container } = render(
+      <Card
+        imgProps={{ src: "some-awsome.jpg", alt: "awsome description" }}
+        title="Awsome image"
+        onClick={mockedFn}
+        clickable
       />
     );
 
@@ -21,14 +34,12 @@ describe("<Card />", () => {
   });
 
   it("should call function when clicked", async () => {
-    const mockedFn = jest.fn();
-
     render(
       <Card
-        imgSrc="some-awsome.jpg"
-        altText="awsome description"
+        imgProps={{ src: "some-awsome.jpg", alt: "awsome description" }}
         title="Awsome image"
         onClick={mockedFn}
+        clickable
       />
     );
 

@@ -24,11 +24,14 @@ const Track: FC<TTrack> = ({ id, title, contentsItems }) => {
         {contentsItems.map((item: TContentItem, index) => (
           <Style.Track key={index}>
             <Card
-              imgSrc={item.images[0][0].url}
-              altText={`Playlist ${item.name} cover`}
+              imgProps={{
+                src: item.images[0][0].url,
+                alt: `Playlist ${item.name} cover`,
+              }}
               title={item.name}
-              onClick={() => handleClick(id)}
+              onClick={() => handleClick(item.id)}
               key={`card-${index}`}
+              clickable
             />
           </Style.Track>
         ))}

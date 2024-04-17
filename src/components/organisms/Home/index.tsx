@@ -14,7 +14,6 @@ const Home = () => {
           <Style.TrackWrapper key={`section-${index}`}>
             {item.contents.items.length > 0 && (
               <Track
-                id={item.id}
                 title={item.title}
                 contentsItems={item.contents.items}
                 key={`track-${index}`}
