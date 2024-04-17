@@ -10,5 +10,6 @@ export const defaultTheme: DefaultTheme = {
       white: "#EEF1EF",
       grey: "#5E6572",
     },
+    highlight: "#c1292e",
   },
 };

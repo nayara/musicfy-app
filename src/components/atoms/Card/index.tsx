@@ -1,6 +1,7 @@
 import { FC } from "react";
 
 import * as Style from "./Card.styles";
+import Button from "../Button";
 
 type TCard = {
   title: string;
@@ -22,9 +23,9 @@ const Card: FC<TCard> = ({
   clickable = false,
   onClick,
 }) => {
-  return clickable ? (
+  return clickable && onClick ? (
     <Style.Container $imgPosition={imgProps.position} $clickable={clickable}>
-      <Style.Button onClick={onClick}>
+      <Button onClick={onClick}>
         <Style.Image
           src={imgProps.src}
           alt={imgProps.alt}
@@ -34,7 +35,7 @@ const Card: FC<TCard> = ({
           <Style.Title>{title}</Style.Title>
           {subtitle && <Style.Subtitle>{subtitle}</Style.Subtitle>}
         </Style.ContentWrapper>
-      </Style.Button>
+      </Button>
     </Style.Container>
   ) : (
     <Style.Container $imgPosition={imgProps.position}>

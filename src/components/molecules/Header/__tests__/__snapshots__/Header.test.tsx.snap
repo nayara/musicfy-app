@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should render header correcly 1`] = `
+.c0 {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  background-color: #090B0B;
+  color: #EEF1EF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c2 {
+  font-family: "Genty";
+  font-size: 3vh;
+  padding: 1.5vh;
+  margin: 0;
+}
+
+.c1 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0.5rem;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.c3 {
+  font-size: 2vh;
+  color: #EEF1EF;
+  padding: 0.5rem 1rem;
+  background-color: #c1292e;
+  border-radius: 0.5rem;
+  margin: 20px;
+  font-weight: bold;
+  letter-spacing: 0.01rem;
+}
+
+<div>
+  <header
+    class="c0"
+  >
+    <button
+      class="c1"
+    >
+      <h1
+        class="c2"
+      >
+        MusicFy
+      </h1>
+    </button>
+    <button
+      class="c1"
+    >
+      <span
+        class="c3"
+      >
+        Login
+      </span>
+    </button>
+  </header>
+</div>
+`;

@@ -6,6 +6,10 @@ const Container = styled.header`
   width: 100vw;
   background-color: ${({ theme }) => theme.colors.neutral.black};
   color: ${({ theme }) => theme.colors.neutral.white};
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export { Container };

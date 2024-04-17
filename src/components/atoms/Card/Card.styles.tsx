@@ -36,16 +36,6 @@ const Container = styled.div<TContainerProps>`
     `}
 `;
 
-const Button = styled.button`
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-`;
-
 type TTextProps = {
   $imgPosition?: string;
 };
@@ -135,4 +125,4 @@ const ContentWrapper = styled.div<TContainerProps>`
   }}
 `;
 
-export { Container, Image, Title, Button, ContentWrapper, Subtitle };
+export { Container, Image, Title, ContentWrapper, Subtitle };
