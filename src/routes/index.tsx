@@ -7,6 +7,6 @@ export const rootPath = "/";
 export const PublicRoutes = (
   <Route path={rootPath}>
     <Route index element={<Home />} />
-    <Route path="/playlist/:id" element={<PlaylistDetail />} />
+    <Route path="/playlist/:playListId" element={<PlaylistDetail />} />
   </Route>
 );

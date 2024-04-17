@@ -4,6 +4,7 @@ import MockAdapter from "axios-mock-adapter";
 
 import { apiInstance } from "../../../client";
 import { useGetHome } from "../use-get-home";
+import { mockedHomeData } from "../mockedHomeData";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -34,9 +35,7 @@ describe("useGetHome", () => {
   });
 
   test("should get home data", async () => {
-    const data = {
-      sections: "some-important-content",
-    };
+    const data = mockedHomeData;
 
     mock.onGet("/home").reply(200, data);
 
@@ -47,7 +46,7 @@ describe("useGetHome", () => {
     await waitFor(() => expect(result.current.isSuccess).toBe(true));
 
     expect(result.current.data).toEqual({
-      sections: "some-important-content",
+      sections: mockedHomeData.sections,
     });
   });
 

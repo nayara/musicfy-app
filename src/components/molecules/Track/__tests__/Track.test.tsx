@@ -5,7 +5,7 @@ import userEvent from "@testing-library/user-event";
 const mockedItems = [
   {
     type: "playlist",
-    id: "37i9dQZF1DXdPec7aLTmlC",
+    id: "some-id",
     name: "Happy Hits!",
     shareUrl: "https://open.spotify.com/playlist/37i9dQZF1DXdPec7aLTmlC",
     description: "Hits to boost your mood and fill you with happiness!",

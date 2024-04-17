@@ -1,9 +1,10 @@
 import MainLayout from "../../components/layouts/Main";
+import PlaylistDetail from "../../components/organisms/PlaylistDetail";
 
 const PlaylistDetailPage = () => {
   return (
     <MainLayout>
-      <div>PlaylistDetailPage</div>
+      <PlaylistDetail />
     </MainLayout>
   );
 };
