@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 const Container = styled.header`
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100vw;
   background-color: ${({ theme }) => theme.colors.primary};
