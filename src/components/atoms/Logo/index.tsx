@@ -1,7 +1,7 @@
 import { FC } from "react";
 import * as Style from "./Logo.styles";
 import { useNavigate } from "react-router-dom";
-import { rootPath } from "../../routes";
+import { rootPath } from "../../../routes";
 
 const Logo: FC = () => {
   const navigate = useNavigate();

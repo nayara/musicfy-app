@@ -1,5 +1,5 @@
 import { FC, ReactNode } from "react";
-import Header from "../components/Header";
+import Header from "../molecules/Header";
 
 type TMainLayoutProps = {
   children: ReactNode;
