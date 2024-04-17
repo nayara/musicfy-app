@@ -8,7 +8,7 @@ describe("<HomePage>", () => {
     render(<HomePage />);
 
     expect(
-      screen.getByRole("heading", { name: "Home Page" })
+      screen.getByRole("heading", { name: "MusicFy" })
     ).toBeInTheDocument();
   });
 });

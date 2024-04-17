@@ -1,9 +1,10 @@
 import MainLayout from "../../components/layouts/Main";
+import Home from "../../components/organisms/Home";
 
 const HomePage = () => {
   return (
     <MainLayout>
-      <h2>Home Page</h2>
+      <Home />
     </MainLayout>
   );
 };

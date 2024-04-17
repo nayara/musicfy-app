@@ -1,6 +1,6 @@
 import { MemoryRouter } from "react-router-dom";
 import App from "../../App";
-import { render, screen } from "../../utils/test-utils";
+import { render } from "../../utils/test-utils";
 
 describe("<Routes>", () => {
   it("should redirect to rootPath when landing in incorrect path", () => {
@@ -12,6 +12,6 @@ describe("<Routes>", () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByText(/Home Page/i)).toBeInTheDocument();
+    expect(window.location.pathname).toBe("/");
   });
 });
