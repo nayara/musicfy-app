@@ -8,11 +8,14 @@ const Button = styled.button`
   font: inherit;
   cursor: pointer;
   outline: inherit;
+  width: 50%;
+  text-align: left;
 `;
 
 const Logo = styled.h1`
   font-family: "Genty";
-  padding: 1rem;
+  font-size: 3vh;
+  padding: 1.5vh;
   margin: 0;
 `;
 

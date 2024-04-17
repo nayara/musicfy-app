@@ -27,23 +27,15 @@ exports[`<Card /> should render correctly clickable card 1`] = `
 .c4 {
   text-align: left;
   color: #EEF1EF;
-  font-size: 1.3rem;
+  font-size: 2vh;
   align-self: flex-start;
   margin: 0;
   padding: 0.3rem 0;
 }
 
-.c5 {
-  text-align: left;
-  color: #A9B4C2;
-  font-size: 1rem;
-  align-self: flex-start;
-  margin: 0;
-}
-
 .c2 {
   border-radius: 0.5rem;
-  height: 10rem;
+  height: 20vh;
 }
 
 .c3 {
@@ -73,11 +65,6 @@ exports[`<Card /> should render correctly clickable card 1`] = `
         >
           Awsome image
         </h2>
-        <h3
-          class="c5"
-        >
-          some subtitle
-        </h3>
       </div>
     </button>
   </div>
@@ -96,23 +83,15 @@ exports[`<Card /> should render correctly unclickable card 1`] = `
 .c3 {
   text-align: left;
   color: #EEF1EF;
-  font-size: 1.3rem;
+  font-size: 2vh;
   align-self: flex-start;
   margin: 0;
   padding: 0.3rem 0;
 }
 
-.c4 {
-  text-align: left;
-  color: #A9B4C2;
-  font-size: 1rem;
-  align-self: flex-start;
-  margin: 0;
-}
-
 .c1 {
   border-radius: 0.5rem;
-  height: 10rem;
+  height: 20vh;
 }
 
 .c2 {
@@ -139,11 +118,6 @@ exports[`<Card /> should render correctly unclickable card 1`] = `
       >
         Awsome image
       </h2>
-      <h3
-        class="c4"
-      >
-        some subtitle
-      </h3>
     </div>
   </div>
 </div>

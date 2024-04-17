@@ -9,11 +9,14 @@ exports[`<Logo> should render logo correctly 1`] = `
   font: inherit;
   cursor: pointer;
   outline: inherit;
+  width: 50%;
+  text-align: left;
 }
 
 .c1 {
   font-family: "Genty";
-  padding: 1rem;
+  font-size: 3vh;
+  padding: 1.5vh;
   margin: 0;
 }
 

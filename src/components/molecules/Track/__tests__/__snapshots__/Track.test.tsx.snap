@@ -27,23 +27,15 @@ exports[`<Track /> should render correctly 1`] = `
 .c7 {
   text-align: left;
   color: #EEF1EF;
-  font-size: 1.3rem;
+  font-size: 2vh;
   align-self: flex-start;
   margin: 0;
   padding: 0.3rem 0;
 }
 
-.c8 {
-  text-align: left;
-  color: #A9B4C2;
-  font-size: 1rem;
-  align-self: flex-start;
-  margin: 0;
-}
-
 .c5 {
   border-radius: 0.5rem;
-  height: 10rem;
+  height: 20vh;
 }
 
 .c6 {
@@ -55,11 +47,13 @@ exports[`<Track /> should render correctly 1`] = `
 
 .c0 {
   color: #EEF1EF;
-  font-size: 1.5rem;
+  font-size: 3vh;
 }
 
 .c1 {
   display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .c2 {
@@ -98,11 +92,6 @@ exports[`<Track /> should render correctly 1`] = `
             >
               Happy Hits!
             </h2>
-            <h3
-              class="c8"
-            >
-              some subtitle
-            </h3>
           </div>
         </button>
       </div>

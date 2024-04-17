@@ -53,7 +53,7 @@ type TTextProps = {
 const Title = styled.h2<TTextProps>`
   text-align: left;
   color: ${({ theme }) => theme.colors.neutral.white};
-  font-size: 1.3rem;
+  font-size: 2vh;
   align-self: flex-start;
   margin: 0;
 
@@ -75,7 +75,7 @@ const Title = styled.h2<TTextProps>`
 const Subtitle = styled.h3<TTextProps>`
   text-align: left;
   color: ${({ theme }) => theme.colors.terciary};
-  font-size: 1rem;
+  font-size: 1.5vh;
   align-self: flex-start;
   margin: 0;
 `;
@@ -91,22 +91,22 @@ const Image = styled.img<TImgProps>`
     switch (size) {
       case "small":
         return css`
-          height: 3rem;
+          height: 5vh;
         `;
 
       case "medium":
         return css`
-          height: 10rem;
+          height: 20vh;
         `;
 
       case "large":
         return css`
-          height: 15rem;
+          height: 40vh;
         `;
 
       default:
         return css`
-          height: 10rem;
+          height: 20vh;
         `;
     }
   }}
