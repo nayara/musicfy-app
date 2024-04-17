@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
 
 type TContainerProps = {
-  clickable?: boolean;
-  imgPosition?: string;
+  $clickable?: boolean;
+  $imgPosition?: string;
 };
 
 const Container = styled.div<TContainerProps>`
@@ -11,8 +11,8 @@ const Container = styled.div<TContainerProps>`
   border-radius: 0.5rem;
   padding: 1rem;
 
-  ${({ imgPosition }) => {
-    switch (imgPosition) {
+  ${({ $imgPosition }) => {
+    switch ($imgPosition) {
       case "start":
         return {
           flexDirection: "row",
@@ -25,8 +25,8 @@ const Container = styled.div<TContainerProps>`
     }
   }}
 
-  ${({ clickable }) =>
-    clickable &&
+  ${({ $clickable }) =>
+    $clickable &&
     css`
       transition: transform 0.45s;
 
@@ -47,7 +47,7 @@ const Button = styled.button`
 `;
 
 type TTextProps = {
-  imgPosition?: string;
+  $imgPosition?: string;
 };
 
 const Title = styled.h2<TTextProps>`
@@ -57,8 +57,8 @@ const Title = styled.h2<TTextProps>`
   align-self: flex-start;
   margin: 0;
 
-  ${({ imgPosition }) => {
-    switch (imgPosition) {
+  ${({ $imgPosition }) => {
+    switch ($imgPosition) {
       case "start":
         return css`
           flex-direction: row;
@@ -115,8 +115,8 @@ const Image = styled.img<TImgProps>`
 const ContentWrapper = styled.div<TContainerProps>`
   display: flex;
 
-  ${({ imgPosition }) => {
-    switch (imgPosition) {
+  ${({ $imgPosition }) => {
+    switch ($imgPosition) {
       case "start":
         return css`
           height: 100%;
