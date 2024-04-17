@@ -36,11 +36,9 @@ const getPlaylistMusics = async (
 ): Promise<TGetPlaylistDetail> => {
   const path = `playlist/contents?playlistId=${playListId}&limit=30`;
 
-  // return apiInstance
-  //   .get(path)
-  //   .then(({ data }) => ({ contents: data.contents }));
-
-  return { contents: mockedData.contents };
+  return apiInstance
+    .get(path)
+    .then(({ data }) => ({ contents: data.contents }));
 };
 
 const QUERY_NAME = "playlist";

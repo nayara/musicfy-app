@@ -31,11 +31,9 @@ type TGetHome = {
 const getHome = async (): Promise<TGetHome> => {
   const path = `home`;
 
-  return { sections: mockedHomeData.sections };
-
-  // return apiInstance.get(path).then(({ data }) => ({
-  //   sections: data.sections,
-  // }));
+  return apiInstance.get(path).then(({ data }) => ({
+    sections: data.sections,
+  }));
 };
 
 const QUERY_NAME = "home";
