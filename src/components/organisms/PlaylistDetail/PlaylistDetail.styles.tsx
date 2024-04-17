@@ -29,6 +29,7 @@ const MusicListWrapper = styled.section`
 
 const PlaylistInfoWrapper = styled.section`
   padding: 0 1.5rem;
+  max-width: 20vw;
 `;
 
 const Container = styled.section`

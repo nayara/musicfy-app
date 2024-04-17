@@ -18,6 +18,4 @@ Then you have to install your dependencies:
 yarn install
 ```
 
-And run `yarn start:dev` command to start the application
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+And run `yarn start:dev` command to start the application, after run, the browser should open in [http://localhost:3000](http://localhost:3000).
