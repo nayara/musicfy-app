@@ -1,4 +1,4 @@
-import { useGetHome } from "../../../api/queries/use-get-home";
+import { TSectionItem, useGetHome } from "../../../api/queries/use-get-home";
 import Track from "../../../components/molecules/Track";
 import * as Style from "./Home.styles";
 
@@ -9,11 +9,12 @@ const Home = () => {
 
   return (
     <Style.Container>
-      {data.sections.items.map((item, index) => {
+      {data.sections.items.map((item: TSectionItem, index) => {
         return (
           <Style.TrackWrapper key={`section-${index}`}>
             {item.contents.items.length > 0 && (
               <Track
+                id={item.id}
                 title={item.title}
                 contentsItems={item.contents.items}
                 key={`track-${index}`}
