@@ -14,16 +14,6 @@ exports[`<Card /> should render correctly clickable card 1`] = `
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.c1 {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-}
-
 .c4 {
   text-align: left;
   color: #EEF1EF;
@@ -43,6 +33,16 @@ exports[`<Card /> should render correctly clickable card 1`] = `
   flex-direction: column;
   justify-content: space-between;
   padding: 0.9rem 0;
+}
+
+.c1 {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0.5rem;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 <div>
